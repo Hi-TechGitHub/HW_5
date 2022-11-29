@@ -37,4 +37,3 @@ void PrintArray(int[] array)
 FillArray(ar);
 PrintArray(ar);
 PrintArraySum(ar);
-//int result =+ arr[i];
