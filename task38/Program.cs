@@ -36,7 +36,7 @@ double FindMax(double[] ar)
         resu = maximal;
     }
     
-    return resu;
+    return Math.Round(resu, 1);
 }
 double FindMin(double[] ar) 
 {
@@ -44,16 +44,20 @@ double FindMin(double[] ar)
     for (int i = 1; i < ar.Length; i++)
     {
         double minimal = ar[i];
-        if (minimal > ar[i - 1]) minimal = ar[i-1];
-
+        if (minimal > ar[i - 1])minimal = ar[i - 1];
+        else minimal = ar[i];
+        resu = minimal;
+        
     }
     
-    return resu;
+    
+    return Math.Round(resu, 1) ;
 }
 double Answer(double min, double max) 
 {
     double res = max - min;
-    return res;
+    res = res * -1;
+    return Math.Round(res, 1) ;
 }
 Console.WriteLine("1. размер 2. мин. число 3. макс. число ");
 int num1 = Convert.ToInt32(Console.ReadLine());
